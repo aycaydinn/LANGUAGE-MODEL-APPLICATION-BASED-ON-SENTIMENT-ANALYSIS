@@ -1,0 +1,15 @@
+---
+responses:
+  200:
+    description: Successful
+    schema:
+      type: object
+      properties:
+        processed_result:
+          type: array
+          items:
+            type: string
+  400:
+    description: Invalid request format or missing 'name' parameter
+  401:
+    description: Unauthorized - missing or invalid JWT token

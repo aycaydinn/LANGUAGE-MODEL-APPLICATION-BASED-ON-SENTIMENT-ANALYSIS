@@ -1,0 +1,21 @@
+---
+parameters:
+  - in: body
+    name: body
+    required: true
+    schema:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+        role:
+          type: string
+responses:
+  201:
+    description: Registration successful
+  400:
+    description: Invalid request format or role
+  409:
+    description: User already exists

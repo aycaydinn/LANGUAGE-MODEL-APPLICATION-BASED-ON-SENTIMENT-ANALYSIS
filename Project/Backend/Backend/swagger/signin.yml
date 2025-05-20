@@ -1,0 +1,24 @@
+---
+parameters:
+  - in: body
+    name: body
+    required: true
+    schema:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+responses:
+  200:
+    description: Successful login
+    schema:
+      type: object
+      properties:
+        access_token:
+          type: string
+        role:
+          type: string
+  401:
+    description: Invalid credentials
